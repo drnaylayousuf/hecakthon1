@@ -1,0 +1,161 @@
+/* Apply a background image and style the body */
+body {
+    font-family: Arial, sans-serif;
+    color: #333;
+    background: url('image1.avif') no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+}
+
+/* Style the container with margin-top */
+.container {
+    margin-top: 40px; /* Add space from the top of the viewport */
+}
+
+/* Center the main content and add padding */
+h1 {
+    text-align: center;
+    color:  #b80257; ; /* Beautiful coral color */
+    margin: 20px  0;
+    margin-top: 50px;
+    
+}
+
+/* Style the form container with circular image */
+.form-container {
+    max-width: 800px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 60px 20px 20px; /* Added padding-top for image */
+    position: relative;
+}
+/* 
+
+
+/* Circular image on top */
+.form-container::before {
+    content: '';
+    display: block;
+    width: 150px; /* Increased image size */
+    height: 150px; /* Increased image size */
+    background: url('image2.jpeg') no-repeat center center;
+    background-size: cover;
+    border-radius: 50%;
+    position: absolute;
+    top: -50px; /* Increased margin from top */
+    left: 50%;
+    transform: translateX(-50%);
+    border: 5px solid #fff; /* White border for contrast */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+
+
+/* Style the form */
+form {
+    background: rgba(255, 255, 255, 0.9); /* Slightly more opaque */
+    max-width: 600px;
+    width: 100%;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    position: relative;
+    z-index: 1;
+}
+
+/* Style form elements */
+.label-container {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #113f67;
+    text-align: center;
+    transition: color 0.3s ease;
+}
+
+/* Floating label effect */
+input[type="text"],
+input[type="email"],
+textarea {
+    width: 100%;
+    padding: 15px;
+    margin-top: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+input:focus,
+textarea:focus {
+    outline: none;
+    border-color: #4CAF50;
+    box-shadow: 0 0 8px rgba(76, 175, 80, 0.3);
+}
+
+/* Floating label effect */
+input:focus ~ .label-container label,
+textarea:focus ~ .label-container label,
+input:not(:placeholder-shown) ~ .label-container label,
+textarea:not(:placeholder-shown) ~ .label-container label {
+    top: -20px;
+    left: 10px;
+    font-size: 12px;
+    background: #fff;
+    padding: 0 5px;
+}
+
+/* Style the submit button */
+button {
+    background: linear-gradient(to right, rgb(173, 83, 137), rgb(60, 16, 83)); /* Linear gradient background */
+    color: white;
+    border: none;
+    padding: 15px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    /* Remove the solid background-color property */
+}
+
+button:hover {
+    background: linear-gradient(to right, rgb(150, 50, 120), rgb(80, 30, 90)); /* Slightly different gradient on hover */
+}
+
+
+/* Style the resume display section */
+#resume {
+    background: rgba(255, 255, 255, 0.9); /* Slightly more opaque */
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#resume h2 {
+    text-align: center;
+    color: #083358; /* Beautiful indigo color */
+}
+
+#resume p {
+    margin: 10px 0;
+}
+
+/* Style the h3 elements */
+h3 {
+    color: #f70776 ; /* Beautiful orange color */
+}
